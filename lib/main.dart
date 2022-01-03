@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:youtuclone2/src/app.dart';
+import 'package:youtuclone2/src/binding/init_binding.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
+      initialBinding: InitBinding(),
       initialRoute: "/",
       getPages: [
         GetPage(name: "/", page: ()=> App())
